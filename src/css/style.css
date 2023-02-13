@@ -1,0 +1,292 @@
+@import './winners.css';
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	font-size: 62.5%;
+}
+
+body {
+	position: relative;
+}
+
+/* NAV */
+
+.nav {
+	display: flex;
+	justify-content: center;
+	width: 100%;
+	height: 10rem;
+	padding-top: 2rem;
+	background: rgba(45, 95, 101, 0.43);
+}
+
+.nav-link {
+	display: inline;
+	margin: 1rem;
+	padding: 1rem 2rem 1rem;
+	text-decoration: none;
+	text-transform: uppercase;
+	color: #eeeeee;
+	font-family: 'Roboto';
+	font-weight: 500;
+	font-size: 3rem;
+	border: 1px solid white;
+	background: rgba(45, 95, 101, 0.43);
+}
+
+.button:hover,
+.nav-link-hover:hover {
+	background: rgba(46, 96, 102, 0.87);
+}
+
+.btn-off {
+	pointer-events: none;
+}
+
+#main {
+	width: 100%;
+	background: rgba(45, 95, 101, 0.43);
+	color: white;
+	min-height: 100vh;
+}
+
+/* GARAGE */
+
+.button {
+	font-family: 'Roboto';
+	font-weight: 500;
+	font-size: 1.5rem;
+	line-height: 16px;
+	height: 3rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 5px 5px 5px 5px;
+	letter-spacing: 1.25px;
+	text-transform: uppercase;
+	background: #f2f9fe;
+	border-color: #f2f9fe;
+	box-shadow: 0px 3px 5px rgb(0 0 0 / 20%), 0px 1px 18px rgb(0 0 0 / 12%), 0px 6px 10px rgb(0 0 0 / 14%);
+	border-radius: 4px;
+	z-index: 1;
+}
+
+/* SETTINGS PANEL */
+.form-create,
+.form-update,
+.form-set-btns {
+	display: flex;
+	justify-content: center;
+	justify-content: space-around;
+	width: 35rem;
+}
+.set-panel {
+	padding-top: 3rem;
+	width: 50rem;
+	padding-left: 5rem;
+}
+
+.form-update,
+.form-set-btns {
+	padding-top: 3rem;
+}
+
+.name-input,
+.name-update {
+	height: 3rem;
+}
+
+/* SECTION PANEL */
+
+.header-garage,
+.header-page {
+	font-size: 3rem;
+	text-transform: capitalize;
+	padding-top: 2rem;
+	padding-left: 6rem;
+}
+
+.header-garage span,
+.header-page span {
+	color: darkgreen;
+}
+
+/* SECTION PANEL - car */
+
+.info-before-api-response {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-right: -50%;
+	transform: translate(-50%, -50%);
+	font-size: 4rem;
+	color: darkgreen;
+	text-transform: uppercase;
+}
+
+.cars-ul {
+	padding-top: 2rem;
+}
+
+.car-li {
+	position: relative;
+	height: 13em;
+	border-bottom: 1px solid rgba(2, 22, 24, 0.43);
+	padding-left: 2rem;
+}
+
+.car-set-btns {
+	display: flex;
+}
+
+.car-name {
+	color: black;
+	font-size: 2rem;
+}
+
+.btn-delete,
+.car-name,
+.btn-stop {
+	margin-left: 1rem;
+}
+
+.btn-stop {
+	z-index: 2;
+}
+.btn-select,
+.btn-delete,
+.btn-stop,
+.btn-start {
+	margin-top: 1rem;
+	width: 7rem;
+}
+.car-name {
+	margin-top: 1rem;
+}
+
+.car-move-btns {
+	display: flex;
+	position: relative;
+}
+
+.car-img,
+.flag-img {
+	width: 10rem;
+	height: 10rem;
+}
+.car-img {
+	position: absolute;
+	left: 15rem;
+}
+
+.car-img > svg {
+	position: absolute;
+}
+
+.flag-img {
+	position: absolute;
+	right: 3rem;
+}
+
+/* PAGINATION */
+
+.pagination-btns {
+	display: flex;
+	justify-content: center;
+}
+
+/* POPUP WINNER */
+
+.popup-shadow {
+	position: absolute;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.01);
+	z-index: 1;
+}
+
+.popup-filed {
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	margin-right: -50%;
+	transform: translate(-50%, -50%);
+	width: 500px;
+	z-index: 2;
+	background: rgba(45, 95, 101, 0.43);
+	z-index: 10;
+	opacity: 10;
+}
+
+.btn-exit-popup {
+	position: absolute;
+	right: 2rem;
+	top: 2rem;
+}
+
+.popup-header {
+	text-transform: none;
+	font-size: 3rem;
+	padding-top: 1rem;
+	text-align: center;
+}
+.winnerFiled {
+	padding-top: 2rem;
+}
+
+.popup-winner-name {
+	grid-area: name;
+}
+
+.popup-winner-time {
+	grid-area: time;
+}
+.popup-winner-name,
+.popup-winner-time {
+	padding-top: 2rem;
+	font-size: 2rem;
+}
+
+.popup-winner-car {
+	grid-area: car;
+}
+.popup-winner-name,
+.popup-winner-time,
+.popup-winner-car {
+	text-align: center;
+}
+
+.popup-winner-info {
+	display: grid;
+	grid-template-areas:
+		'name car'
+		'time car';
+}
+
+.engine-info {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-right: -50%;
+	transform: translate(-50%, -50%);
+	color: red;
+	font-size: 3rem;
+}
+
+@media (max-width: 1000px) {
+	.engine-info {
+		font-size: 2rem;
+	}
+}
+
+@media (max-width: 750px) {
+	.engine-info {
+		font-size: 1.5rem;
+	}
+}

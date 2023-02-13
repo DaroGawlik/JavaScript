@@ -1,0 +1,3 @@
+    to="/.netlify/raceCarsAPI/indexAPI:splat"
+    from="/*"
+    status=200
