@@ -3,7 +3,7 @@ bin-debug/
 bin-release/
 [Oo]bj/
 node_modules
-build
+# build
 async-race-api/
 # Other files and folders
 .settings/
